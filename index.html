@@ -1,0 +1,88 @@
+<!-- Girindra Fajar Nugraha -->
+<!-- TI-2B -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angkringan Joss</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        var i = 0;
+        $(document).ready(function(){
+            $('.slidertitle, #slider img').hide();
+            showNextImage();
+            setInterval('showNextImage()', 4000);
+        });
+
+        function showNextImage(){
+            i++;
+            $('#sliderImage' + i).appendTo('#slider').fadeIn(1300).delay(1300).fadeOut(1300);
+            $('#title' + i).appendTo('#slider').fadeIn(1300).delay(1300).fadeOut(1300);
+            if (i == 3){
+                i = 0;
+            }
+        };
+    </script>
+</head>
+<body>
+	<div class="bingkai">
+		<div class="header">
+			<h1 align="center">ANGKRINGAN JOSS</h1>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="profil.html">Profil</a></li>
+				<li><a href="biodata.html">Biodata</li>
+				<li><a href="pemesanan.html">Pemesanan</a></li>
+			</ul>
+		</div>
+		<div class="badan">
+			<div class="sidebar">
+                <p>Menu Favorit :</p>
+				<ul>
+                    <li>Makanan</li>
+                    <p>
+                        - Nasi Kucing<br><br>
+                        - Nasi Bakar
+                    </p>
+                    <li>Camilan</li>
+                    <p>
+                        - Aneka Sate<br><br>
+                        - Gorengan
+                    </p>
+                    <li>Minuman</li>
+                    <p>
+                        - Kopi Jos<br><br>
+                        - Es Teh
+                    </p>
+				</ul>
+			</div>
+			<div class="content">
+                <h2>Selamat Datang di Website Resmi Angkringan Joss</h2>
+                <div id="slider">
+                    <img id="sliderImage1" src="angkringan.jpg">
+                    <div class="slidertitle" id="title1">Angkringan</div>
+        
+                    <img id="sliderImage2" src="gorengan.jpg">
+                    <div class="slidertitle" id="title2">Makanan</div>
+        
+                    <img id="sliderImage3" src="esteh.jpg">
+                    <div class="slidertitle" id="title3">Minuman</div>
+                </div>
+                <p align="justify">Angkringan Joss merupakan salah satu angkringan di Kota Yogyakarta yang telah 
+                    berdiri sejak tahun 1970. Angkringan Joss merupakan salah satu pelopor angkringan di Kota Yogyakarta. 
+                    Lokasi Angkringan Joss terletak di jalan Malioboro No. 39 Yogyakarta. Angkringan Joss buka setiap hari mulai pukul 16:00 s/d 04:00 WIB.
+                    Tutup kalau lagi nggak buka, buka kalau lagi nggak punya uang.
+                </p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="footer">
+			<footer>Copyright 2020 Girindra</footer>
+		</div>
+    </div>
+    <marquee><h2>Harga <font color="red">Mahasiswa</font>, Rasa <font color="red">Istimewa</font>...</h2></marquee>
+</body>
+</html>
